@@ -1,0 +1,30 @@
+{
+  "name": "base-bot",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "lint": "oxlint",
+    "fmt": "oxfmt",
+    "dev": "bun --watch .",
+    "b": "oxlint && rm -rf bin && bun build --compile --minify --target bun --outfile ./bin/bot src/index.ts",
+    "start": "./bin/bot"
+  },
+  "dependencies": {
+    "discord.js": "^14.27.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.4",
+    "@typescript-eslint/utils": "^8.72.1",
+    "oxfmt": "^0.75.0",
+    "oxlint": "^1.90.0",
+    "oxlint-tsgolint": "^7.0.2005",
+    "typescript": "^7.0.2"
+  },
+  "packageManager": "bun@1.4.4"
+}
